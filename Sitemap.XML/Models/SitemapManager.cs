@@ -35,6 +35,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Xml;
+using System;
 
 namespace Sitemap.XML.Models
 {
@@ -243,7 +244,7 @@ namespace Sitemap.XML.Models
 
             // getting shared content
             var sharedModels = new List<SitemapItem>();
-            var sharedDefinitions = Db.SelectItems(string.Format("fast:{0}/*", _config.SitemapConfigurationItemPath));
+            var sharedDefinitions = Db.SelectItems(string.Format("fast:{0}/*", ResolveQueryPath(_config.SitemapConfigurationItemPath)));
             var site = Factory.GetSite(_config.SiteName);
             var enabledTemplates = BuildListFromString(disTpls, '|');
 	        var excludeItems = BuildListFromString(excludeItemsField, '|');
@@ -304,6 +305,14 @@ namespace Sitemap.XML.Models
             var result = selected.ToList();
 
             return result;
+        }
+
+        private static string ResolveQueryPath(string path) {
+            StringBuilder startItemPath = new StringBuilder(@"/");
+            startItemPath.Append(string.Join("/", path.Split(new char[] { '/' },
+            StringSplitOptions.RemoveEmptyEntries).Select(x => x.Contains("-") ? string.Format("#{0}#", x) : x)));
+            
+            return startItemPath.ToString();
         }
 
         #region View Helpers
