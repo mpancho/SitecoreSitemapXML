@@ -8,6 +8,7 @@ name: SitemapManager
 master: {00000000-0000-0000-0000-000000000000}
 template: {EB06CEC0-5E2D-4DC4-875B-01ADCC577D13}
 templatekey: Application
+created: 20081126T085100Z
 
 ----field----
 field: {FC2B18B3-1631-4C3F-9E47-51DF05030026}
@@ -69,13 +70,13 @@ content-length: 0
 field: {F1A1FE9E-A60C-4DDB-A3A0-BB5B29FE732E}
 name: __Renderings
 key: __renderings
-content-length: 237
+content-length: 145
 
-<?xml version="1.0" encoding="utf-16"?><r xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}" l="{D854F540-5179-40B8-BCBF-AFBFA64E9D5E}" /></r>
+<r xmlns:xsd="http://www.w3.org/2001/XMLSchema" ><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}" l="{D3DA435C-9AE4-4F3A-922A-2E42E58AFBBB}" /></r>
 ----version----
 language: en
 version: 1
-revision: 10218f98-e131-4bae-9a6d-829f5128d352
+revision: 80747c7e-881a-4faa-bd81-ad1f4263f8af
 
 ----field----
 field: {67B6378B-C9F1-47C7-9CAC-BFA79B0727D9}
@@ -118,14 +119,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-10218f98-e131-4bae-9a6d-829f5128d352
+80747c7e-881a-4faa-bd81-ad1f4263f8af
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
-content-length: 34
+content-length: 16
 
-20090505T085450:633771104901718750
+20191218T143906Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
