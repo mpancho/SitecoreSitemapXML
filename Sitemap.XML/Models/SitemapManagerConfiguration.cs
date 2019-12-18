@@ -92,8 +92,8 @@ namespace Sitemap.XML.Models
                 var site = Factory.GetSite(SiteName); // GetSite(SiteName);
                 var sitemapPath = site.Properties["sitemapPath"];
                 if (string.IsNullOrWhiteSpace(sitemapPath))
-                {
-                    return GetValueByName("sitemapConfigurationItemPath") + SiteName;
+                { 
+                    return StringUtil.EnsurePostfix('/', GetValueByName("sitemapConfigurationItemPath")) + SiteName;
                 }
                 else
                 {
